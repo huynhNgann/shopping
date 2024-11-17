@@ -1,0 +1,113 @@
+---=====DATABASE QUẢN LÝ CHUNG======
++ users(id,name.email,password,created_at,updated_at)
++ order_items(id,order_id,product_id,quantity)
++ orders(id,user_id,customer_id,status,created_at)
++ customers(id,name,address,created_at,updated_at)
++ products(id,name,price,)
++ product_image(id,image,)
++ product_tag(id)
++ categories(id)
++ menu()
++ sliders()
++ settings()
++ tags()
+
+---Khoá học laravel xây dựng web bán hàng thực tế - P3: Tích hợp adminlte vào dự án  
++ 
+---Khoá học laravel xây dựng web bán hàng thực tế - P5: Tạo màn hình thêm mới danh mục 
+    -17-10-2024
++ 
+---Khoá học laravel xây dựng web bán hàng thực tế - P7:Phân tích đệ quy danh mục
++ Đệ quy là gì? Dùng đệ quy vào đâu? Dùng đệ quy như thế nào?
+=> Hàm đệ quy : đầu tiên là chạy category 1, lấy đc id =10
+    => sau đó nó tìm con id=10 category 1.1
+    => sau khi tìm con 12,14,15 là con
+    => id=13, tìm cháu là ra 16 => category 1.1.1
+    => sau đó quay lại in ra vòng cháu category 1.2, category 1.3
+    => sau cùng quay lại cha category 1.3
+
+---Khoá học laravel xây dựng web bán hàng thực tế - P8: Thêm danh mục sản phẩm
++ Thêm 1 folder Componenst -> Tạo file recusive dùng để thêm categories
++ viết đệ quy dùng để lm danh mục cha, dnah mục con 
+---Khoá học laravel xây dựng web bán hàng- P9: Danh sách danh mục sp
++ Viết hàm dùng chung, gọi ra hàm dùng chung 
++ Hiểu được cách hiển thị ra giao diện ds dạnh mục sp
+---Khoá học laravel xây dựng web bán hàng- P10: Cập nhật danh mục sp
++ Hiểu sơ về ý nghĩa của gọi hàm dùng chung 
++ Hiểu được cách update danh mục sp 
+---Khoá học laravel xây dựng web bán hàng- P11: Xoá danh mục sản phẩm
++ Các bước để xoá mềm:
+    - Tạo 1 bảng db để xoá mềm=> "Dùng để thực hiện xoá: $table->softDeletes();"
+    - Dùng usesoftdb trong model để thực hiện thao tác xoá
+=> Biết được khi xoá 1 sản phẩm thì sp đó sẽ xoá, nhưng đồng thời lưu lại ngày giờ xoá (xoá mềm)
+---Khoá học laravel xây dựng web bán hàng- P12: Tạo bảng menu
+- Mỗi phần cần phải db=> để dễ quản lý
+- Tạo db. model, controller và gán view cơ bản, chưua xử lí đến dữ liệu
+---Khoá học laravel xây dựng web bán hàng- P13: Tạo đệ quy select menu
+- Xây dựng cơ sở về đệ quy menu 
+---Khoá học laravel xây dựng web bán hàng- P14: Giải thích về đệ quy menu
++giải thích cách chạy
+    /**
+     * b1: lấy tất cả menu có parent_id=0; --menu 1, menu 2, menu3
+     * //sau khi lấy đc dl => foreach
+     * // lần lặp đầu tiên sẽ in ra menu 1 -> lấy $dataItem
+     * // data sẽ là menu 1.1 và menu 1.2
+     */
+---Khoá học laravel xây dựng web bán hàng- P15: Tạo và hiển thị danh sách menu
++ Học về cách tạo 
+
+---Khoá học laravel xây dựng web bán hàng- P16: Tạo và hiển thị danh sách menu
++ Cách tạo thêm cột, sau đó thêm dữ liệu trong controller create
+
+---Khoá học laravel xây dựng web bán hàng- P17: Hiển thị form cập nhật menu
++ Update lại thông tin thay đổi của form menu
++ Viết lại thêm hàm đệ quy của menu 1 lần nữa
+
+---Khoá học laravel xây dựng web bán hàng- P18: Cập nhật menu
++ Lưu dữ liệu đã thay đổi vào db
++ Hiển thị lại giao diện 1 lần nữa 
+
+---Khoá học laravel xây dựng web bán hàng- P19: Xoá menu
++ Logic để xoá id -> menu
+---Khoá học laravel xây dựng web bán hàng- P20: Tạo trang login Admin
++ Tích hợp giao diện login 
++ Code logic khi post submit form
++ Tải giao diện login trong bootsnipp.com/tags/login
+
+---Khoá học laravel xây dựng web bán hàng- P21: Format lại Router
++ làm gọn lại code để cho tường minh hơn
+
+---Khoá học laravel xây dựng web bán hàng- P22: Tạo bảng sản phẩm
++ Tạo thêm 4 bảng từ thiết kế db: products, product images, tags, product tag 
+
+---Khoá học laravel xây dựng web bán hàng- P23: Tạo tranh danh sách sản phẩm bootstrap
++ Thêm controller Product
++ Khởi tạo route của adminproduct
+
+---Khoá học laravel xây dựng web bán hàng- P24: Hiển thị form thêm sản phẩm
++ show ra form thêm sp 
++ thêm class select 2 vào trong các select 
+
+---Khoá học laravel xây dựng web bán hàng- P25: Format thêm sản phẩm
++ search => laravel 11 file man =>https://unisharp.github.io/laravel-filemanager/installation
+    + thao tác các bước để xử lí thêm thư viện, upload file, upload img
+    + 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
